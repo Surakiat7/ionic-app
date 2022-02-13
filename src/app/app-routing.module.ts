@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'dbhome',
+    loadChildren: () => import('./dbhome/dbhome.module').then( m => m.DBhomePageModule)
+  },
 ];
 
 @NgModule({
